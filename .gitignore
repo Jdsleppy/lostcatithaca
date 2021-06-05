@@ -1,1 +1,7 @@
 .vscode
+**/settings_local.py
+*.sqlite3
+__pycache__/
+uploads/
+collected_static/
+requirements.txt

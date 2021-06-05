@@ -1,0 +1,32 @@
+{% if metadata_title %}
+    <title>{{ metadata_title }} | LostCat Ithaca</title>
+    <meta property="og:title" content="{{ metadata_title }} | LostCat Ithaca" />
+{% else %}
+    <title>LostCat Ithaca</title>
+    <meta property="og:title" content="LostCat Ithaca" />
+{% endif %}
+
+{% with description=metadata_description|default:"LostCat is a street art phenomenon in Ithaca, New York. This is a community-sourced map and gallery of LostCats." %}
+    <meta name="description" content="{{ description }}" />
+    <meta property="og:description" content="{{ description }}" />
+{% endwith %}
+
+{% with uri=request.build_absolute_uri %}
+    <meta property="og:url" content="{{ uri }}">
+    <link rel="canonical" href="{{ uri }}">
+{% endwith %}
+
+<meta property="og:locale" content="en_US">
+<meta property="og:type" content="website">
+
+{% if metadata_image_uri %}
+    <meta property="og:image" content="{{ metadata_image_uri }}">
+    {% if metadata_image_alt %}
+        <meta property="og:image:alt" content="{{ metadata_image_alt }}">
+    {% endif %}
+    <meta name="twitter:card" content="summary_large_image">
+{% elif metadata_image_uri_fallback %}
+    <meta property="og:image" content="{{ metadata_image_uri_fallback }}">
+    <meta property="og:image:alt" content="The LostCat Ithaca logo">
+    <meta name="twitter:card" content="summary">
+{% endif %}

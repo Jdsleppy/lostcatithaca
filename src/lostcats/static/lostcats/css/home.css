@@ -1,0 +1,18 @@
+.home-logo {
+  height: auto;
+  width: 100%;
+  max-width: 200px;
+}
+
+svg.bi-megaphone-fill {
+  width: 100%;
+  max-width: 50px;
+}
+
+.card ul {
+  list-style-image: url("/static/lostcats/images/list-bullets.svg");
+}
+
+.card li::marker {
+  font-size: 16px;
+}

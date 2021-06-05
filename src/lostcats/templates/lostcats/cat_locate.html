@@ -1,0 +1,33 @@
+{% extends 'lostcats/base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div id="map" class="mapWithCrosshairs">
+    <div class="interactionButtonContainer">
+        <h2 class="instructions text-white bg-dark rounded p-3 m-0 me-3">Where's that cat?</h2>
+        <button id="interactionButton" class="interactionButton">OK</button>
+    </div>
+    <div class="centerMarkerContainer">
+        <img class="centerMarker" src="{% static 'lostcats/images/crosshairs.svg' %}" alt="" />
+    </div>
+</div>
+<form id="catLocateForm" class="d-none" action="{% url 'cat-create' %}" method="get">
+    {{ form }}
+</form>
+{% endblock content %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'lostcats/css/leaflet.css' %}" >
+<link rel="stylesheet" href="{% static 'lostcats/css/map_common.css' %}" >
+<link rel="stylesheet" href="{% static 'lostcats/css/map_fullscreen.css' %}" >
+<link rel="stylesheet" href="{% static 'lostcats/css/cat_locate.css' %}" >
+{% endblock head%}
+
+
+{% block scripts %}
+<script src="{% static 'lostcats/js/leaflet.js' %}"></script>
+<script src="{% static 'lostcats/js/map_common.js' %}"></script>
+<script src="{% static 'lostcats/js/cat_locate.js' %}"></script>
+{% endblock scripts %}
