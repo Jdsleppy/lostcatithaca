@@ -310,11 +310,15 @@ python-versions = ">=3.7"
 
 [[package]]
 name = "pillow"
-version = "8.4.0"
+version = "9.2.0"
 description = "Python Imaging Library (Fork)"
 category = "main"
 optional = false
-python-versions = ">=3.6"
+python-versions = ">=3.7"
+
+[package.extras]
+docs = ["furo", "olefile", "sphinx (>=2.4)", "sphinx-copybutton", "sphinx-issues (>=3.0.1)", "sphinx-removed-in", "sphinxext-opengraph"]
+tests = ["check-manifest", "coverage", "defusedxml", "markdown2", "olefile", "packaging", "pyroma", "pytest", "pytest-cov", "pytest-timeout"]
 
 [[package]]
 name = "platformdirs"
@@ -525,7 +529,7 @@ python-versions = "*"
 [metadata]
 lock-version = "1.1"
 python-versions = "^3.8"
-content-hash = "ca350b45f7e95de48cb23297bc95c71dbb0ff39486f581058c9623eee60ab121"
+content-hash = "b1e6bd63c1e4bdca32455045d10e1876d938f597a68679f7fed5af4ffdfd45b1"
 
 [metadata.files]
 asgiref = []
