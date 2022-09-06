@@ -20,7 +20,7 @@ class TestCatDetail(TemporaryMediaTestCase):
         )
 
         self.assertTemplateNotUsed(resp, "lostcats/cat_detail.html")
-        self.assertEquals(resp.status_code, 404)
+        self.assertEqual(resp.status_code, 404)
 
     def test_fetch(self):
         """Fetching a cat should render the cat detail template with
