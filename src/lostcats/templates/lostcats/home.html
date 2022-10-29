@@ -1,11 +1,13 @@
 {% extends 'lostcats/base.html' %}
 {% load static %}
 
+{% block body_class %}home-page{% endblock %}
+
 
 {% block content %}
 <div class="w-100 max-width-md m-auto p-3 p-md-5 d-flex flex-column align-items-center shadow">
   <h1 class="text-center">LostCat is a street art phenomenon in Ithaca, New York</h1>
-  <img class="home-logo mb-5" src="{% static 'lostcats/images/logo-full.svg' %}" />
+  <img class="home-page-logo mb-5" src="{% static 'lostcats/images/logo-full.svg' %}" />
   <p class="max-width-sm mb-5">
     This site is a
     community-sourced map and gallery of LostCats. Please contribute any new cats
@@ -59,7 +61,3 @@
   </div>
 </div>
 {% endblock content %}
-
-{% block head %}
-<link rel="stylesheet" href="{% static 'lostcats/css/home.css' %}" >
-{% endblock head%}

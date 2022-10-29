@@ -1,0 +1,38 @@
+.cat-locate-page {
+  .instructions {
+    z-index: 800;
+    animation: flyin 1.2s ease forwards;
+    opacity: 0;
+    transform: translateX(-1000px);
+    filter: blur(4px);
+  }
+
+  @keyframes flyin {
+    to {
+      filter: blur(0);
+      transform: none;
+      opacity: 1;
+    }
+  }
+
+  #map {
+    height: 100%;
+    width: 100vw;
+    display: flex;
+    flex-flow: column nowrap;
+    align-items: center;
+    justify-content: center;
+
+    .centerMarkerContainer {
+      position: absolute;
+      z-index: 800;
+      left: auto;
+      right: auto;
+
+      .centerMarker {
+        height: 4rem;
+        width: 4rem;
+      }
+    }
+  }
+}

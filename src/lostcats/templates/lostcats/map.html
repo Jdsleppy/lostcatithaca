@@ -1,6 +1,7 @@
 {% extends 'lostcats/base.html' %}
 {% load static %}
 
+{% block body_class %}map-page{% endblock %}
 
 {% block content %}
 {{ json_data|json_script:"cats-data" }}
@@ -11,14 +12,6 @@
     </div>
 </div>
 {% endblock content %}
-
-
-{% block head %}
-<link rel="stylesheet" href="{% static 'lostcats/css/leaflet.css' %}" >
-<link rel="stylesheet" href="{% static 'lostcats/css/map_common.css' %}" >
-<link rel="stylesheet" href="{% static 'lostcats/css/map_fullscreen.css' %}" >
-{% endblock head%}
-
 
 {% block scripts %}
 <script src="{% static 'lostcats/js/leaflet.js' %}"></script>

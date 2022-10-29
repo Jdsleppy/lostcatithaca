@@ -1,6 +1,7 @@
 {% extends 'lostcats/base.html' %}
 {% load static %}
 
+{% block body_class %}gallery-page{% endblock %}
 
 {% block content %}
 <div class="w-100 max-width-md m-auto p-3 p-md-5 d-flex flex-column align-items-center shadow">
@@ -57,12 +58,3 @@
     {% endif %}
 </div>
 {% endblock content %}
-
-
-{% block head %}
-<link rel="stylesheet" href="{% static 'lostcats/css/gallery.css' %}" >
-{% endblock head%}
-
-
-{% block scripts %}
-{% endblock scripts %}

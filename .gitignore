@@ -2,6 +2,8 @@
 **/settings_local.py
 *.sqlite3
 __pycache__/
+node_modules/
 uploads/
 collected_static/
 requirements.txt
+src/lostcats/static/lostcats/css/styles.css.map

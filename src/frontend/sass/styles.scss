@@ -1,0 +1,12 @@
+@use "base";
+
+@use "components/map";
+
+@use "pages/cat_create";
+@use "pages/cat_detail";
+@use "pages/cat_locate";
+@use "pages/gallery";
+@use "pages/home";
+@use "pages/map" as map_page;
+
+@use "vendor/leaflet";

@@ -1,0 +1,26 @@
+{
+  "name": "lostcat",
+  "version": "1.0.0",
+  "description": "- Increase resolution of map icon images? - Separate \"camera\" vs \"filesystem\" image upload buttons might make UX clearer - Image preview (and cropping?) widget during image upload",
+  "main": "index.js",
+  "scripts": {
+    "dev:css": "sass --watch src/frontend/sass/styles.scss src/lostcats/static/lostcats/css/styles.css",
+    "build:css": "sass --style=compressed --no-source-map src/frontend/sass/styles.scss src/lostcats/static/lostcats/css/styles.css",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Jdsleppy/lostcatithaca.git"
+  },
+  "type": "module",
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Jdsleppy/lostcatithaca/issues"
+  },
+  "homepage": "https://github.com/Jdsleppy/lostcatithaca#readme",
+  "devDependencies": {
+    "esbuild": "^0.15.12",
+    "sass": "^1.55.0"
+  }
+}
