@@ -1,7 +1,9 @@
 {% extends 'lostcats/base.html' %}
 {% load static %}
 
+
 {% block body_class %}cat-locate-page{% endblock %}
+
 
 {% block content %}
 <div id="map">
@@ -17,6 +19,12 @@
     {{ form }}
 </form>
 {% endblock content %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'lostcats/css/fullscreen_map.css' %}" >
+{% endblock head%}
+
 
 {% block scripts %}
 <script src="{% static 'lostcats/js/leaflet.js' %}"></script>

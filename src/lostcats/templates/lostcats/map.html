@@ -1,17 +1,24 @@
 {% extends 'lostcats/base.html' %}
 {% load static %}
 
+
 {% block body_class %}map-page{% endblock %}
+
 
 {% block content %}
 {{ json_data|json_script:"cats-data" }}
-
 <div id="map">
     <div class="interactionButtonContainer">
         <a class="interactionButton" href="{% url 'cat-locate' %}">Add a cat</a>
     </div>
 </div>
 {% endblock content %}
+
+
+{% block head %}
+<link rel="stylesheet" href="{% static 'lostcats/css/fullscreen_map.css' %}" >
+{% endblock head%}
+
 
 {% block scripts %}
 <script src="{% static 'lostcats/js/leaflet.js' %}"></script>
