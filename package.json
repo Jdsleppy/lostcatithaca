@@ -4,8 +4,8 @@
   "description": "LostCat is a street art phenomenon in Ithaca, New York. This is a community-sourced map and gallery of LostCats.",
   "main": "index.js",
   "scripts": {
-    "dev:css": "sass --watch src/frontend/sass/styles.scss src/lostcats/static/lostcats/css/styles.css",
-    "build:css": "sass --style=compressed --no-source-map src/frontend/sass/styles.scss src/lostcats/static/lostcats/css/styles.css",
+    "dev:css": "sass --watch --load-path=node_modules/bootstrap/dist/css src/frontend/sass/styles.scss src/lostcats/static/lostcats/css/styles.css",
+    "build:css": "sass --style=compressed --no-source-map --load-path=node_modules/bootstrap/dist/css src/frontend/sass/styles.scss src/lostcats/static/lostcats/css/styles.css",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -20,6 +20,7 @@
   },
   "homepage": "https://github.com/Jdsleppy/lostcatithaca#readme",
   "dependencies": {
+    "bootstrap": "^5.1.3",
     "esbuild": "^0.15.12",
     "sass": "^1.55.0"
   }
