@@ -1,7 +1,15 @@
+html,
+body {
+  height: 100%;
+  width: 100vw;
+}
+
 .layout {
   display: flex;
   flex-flow: column nowrap;
   justify-content: start;
+  height: auto;
+  min-height: 100%;
 }
 
 .nav {
