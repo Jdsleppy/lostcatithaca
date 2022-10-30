@@ -1,7 +1,7 @@
 {
   "name": "lostcat",
   "version": "1.0.0",
-  "description": "- Increase resolution of map icon images? - Separate \"camera\" vs \"filesystem\" image upload buttons might make UX clearer - Image preview (and cropping?) widget during image upload",
+  "description": "LostCat is a street art phenomenon in Ithaca, New York. This is a community-sourced map and gallery of LostCats.",
   "main": "index.js",
   "scripts": {
     "dev:css": "sass --watch src/frontend/sass/styles.scss src/lostcats/static/lostcats/css/styles.css",
@@ -10,7 +10,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Jdsleppy/lostcatithaca.git"
+    "url": "https://github.com/Jdsleppy/lostcatithaca.git"
   },
   "type": "module",
   "author": "",
@@ -19,7 +19,7 @@
     "url": "https://github.com/Jdsleppy/lostcatithaca/issues"
   },
   "homepage": "https://github.com/Jdsleppy/lostcatithaca#readme",
-  "devDependencies": {
+  "dependencies": {
     "esbuild": "^0.15.12",
     "sass": "^1.55.0"
   }
