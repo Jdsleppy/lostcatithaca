@@ -1,3 +1,4 @@
+```
 ssh lostcatithaca.com
 cd lostcat
 git pull
@@ -11,3 +12,4 @@ python manage.py check --deploy --fail-level=WARNING
 python manage.py migrate
 python manage.py collectstatic --clear --no-input
 sudo systemctl reload lostcat.service
+```
