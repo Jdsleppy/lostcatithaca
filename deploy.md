@@ -1,5 +1,6 @@
 ssh lostcatithaca.com
 cd lostcat
+git pull
 nvm install
 npm install
 npm run build:css
