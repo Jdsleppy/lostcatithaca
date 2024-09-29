@@ -7,11 +7,7 @@
 
 {% block content %}
 {{ json_data|json_script:"cats-data" }}
-<div id="map">
-    <div class="interactionButtonContainer">
-        <a class="interactionButton" href="{% url 'cat-locate' %}">Add a cat</a>
-    </div>
-</div>
+<div id="map"></div>
 {% endblock content %}
 
 

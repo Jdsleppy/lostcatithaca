@@ -7,6 +7,4 @@ urlpatterns = [
     path("map/", views.Map.as_view(), name="map"),
     path("cats/", views.Gallery.as_view(), name="gallery"),
     path("cats/<pk>/<slug>/", views.CatDetail.as_view(), name="cat-detail"),
-    path("locate/", views.CatLocate.as_view(), name="cat-locate"),
-    path("create/", views.CatCreate.as_view(), name="cat-create"),
 ]

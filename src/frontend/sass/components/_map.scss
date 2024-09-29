@@ -1,49 +1,6 @@
 #map {
   flex: 1;
 
-  .interactionButtonContainer {
-    /* Button at bottom-left in mobile */
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    display: flex;
-    flex-flow: row nowrap;
-    justify-content: flex-start;
-    align-items: center;
-
-    @media (min-width: 576px) {
-      & {
-        /* Button at top-right on larger screens */
-        bottom: auto;
-        top: 0;
-        justify-content: flex-end;
-      }
-    }
-
-    .interactionButton {
-      display: flex;
-      z-index: 800;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      text-decoration: none;
-      border: 1px solid white;
-      box-shadow: 1px 5px 5px 0px hsla(1, 100%, 0%, 50%);
-      background-color: hsl(348, 83%, 47%);
-      padding: 1rem;
-      width: 5.5rem;
-      height: 5.5rem;
-      border-radius: 50%;
-      color: white;
-      font-size: 1.5rem;
-      line-height: 1;
-
-      &:hover {
-        background-color: hsl(348, 83%, 37%);
-      }
-    }
-  }
-
   .leaflet-popup-content {
     width: 200px !important;
   }

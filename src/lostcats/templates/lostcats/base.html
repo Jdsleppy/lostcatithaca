@@ -31,15 +31,8 @@
       </nav>
       {% block content %}{% endblock content %}
     </div>
-    <script
-      src="https://browser.sentry-cdn.com/6.7.1/bundle.min.js"
-      integrity="sha384-+GoWV2WnDUGsSmipBvyBrWuhW8hPa/D21fH+j3NoZxDf9RgDryqh4Ug4L+7E1nxM"
-      crossorigin="anonymous"></script>
     <script src="{% static 'lostcats/js/sentry-init.js' %}"></script>
     <script src="{% static 'lostcats/js/bootstrap.bundle.min.js' %}"></script>
     {% block scripts %}{% endblock scripts %}
-    {% if not debug %}
-      <script data-goatcounter="https://goat.lostcatithaca.com/count" async src="//goat.lostcatithaca.com/count.js"></script>
-    {% endif %}
   </body>
 </html>

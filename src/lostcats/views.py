@@ -1,13 +1,10 @@
-from django.core.exceptions import BadRequest
-from django.views.generic import TemplateView, ListView, DetailView, FormView
-from django.views.generic.edit import CreateView
+from bakery.views import BuildableTemplateView, BuildableListView, BuildableDetailView
 
-from lostcats.forms import CatCreateForm, CatLocateForm
 from lostcats.models import LostCat
 from lostcats.serializers import cat_serializer
 
 
-class Home(TemplateView):
+class Home(BuildableTemplateView):
     template_name = "lostcats/home.html"
 
     def get_context_data(self, **kwargs):
@@ -16,12 +13,12 @@ class Home(TemplateView):
         return context
 
 
-class Robots(TemplateView):
+class Robots(BuildableTemplateView):
     template_name = "lostcats/robots.txt"
     content_type = "text/plain"
 
 
-class Map(ListView):
+class Map(BuildableListView):
     model = LostCat
     context_object_name = "cats"
     template_name = "lostcats/map.html"
@@ -34,7 +31,7 @@ class Map(ListView):
         return context
 
 
-class CatDetail(DetailView):
+class CatDetail(BuildableDetailView):
     model = LostCat
     template_name = "lostcats/cat_detail.html"
     context_object_name = "cat"
@@ -50,45 +47,7 @@ class CatDetail(DetailView):
         return context
 
 
-class CatLocate(FormView):
-    template_name = "lostcats/cat_locate.html"
-    form_class = CatLocateForm
-
-
-class CatCreate(CreateView):
-    template_name = "lostcats/cat_create.html"
-    form_class = CatCreateForm
-    success_url = None  # will reverse the model objects absolute URL
-
-    MISSING_COORDS_MESSAGE = "Missing latitude and longitude query params"
-
-    def get_initial(self):
-        initial = super().get_initial()
-
-        if self.request.method == "GET":
-            if any(x not in self.request.GET for x in ("latitude", "longitude")):
-                raise BadRequest(self.MISSING_COORDS_MESSAGE)
-
-            initial["latitude"] = self.request.GET["latitude"]
-            initial["longitude"] = self.request.GET["longitude"]
-
-        return initial
-
-    def get_context_data(self, **kwargs):
-        context = super().get_context_data(**kwargs)
-
-        if any(x not in self.request.GET for x in ("latitude", "longitude")):
-            raise BadRequest(self.MISSING_COORDS_MESSAGE)
-
-        context["json_data"] = {
-            "latitude": self.request.GET["latitude"],
-            "longitude": self.request.GET["longitude"],
-        }
-
-        return context
-
-
-class Gallery(ListView):
+class Gallery(BuildableListView):
     model = LostCat
     context_object_name = "cats"
     template_name = "lostcats/gallery.html"

@@ -37,7 +37,17 @@ INSTALLED_APPS = [
     "django_extensions",
     "debug_toolbar",
     "lostcats",
+    "bakery",
 ]
+
+BUILD_DIR = BASE_DIR / "build"
+BAKERY_VIEWS = (
+    "lostcats.views.Home",
+    "lostcats.views.Robots",
+    "lostcats.views.Map",
+    "lostcats.views.CatDetail",
+    "lostcats.views.Gallery",
+)
 
 MIDDLEWARE = [
     "debug_toolbar.middleware.DebugToolbarMiddleware",
